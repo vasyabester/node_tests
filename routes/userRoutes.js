@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/user');
 const sequelize = require('../db');
 
-// Маршрут для обновления баланса пользователя
+// роут для обновления баланса пользователя
 router.post('/updateBalance', async (req, res) => {
     const { userId, amount } = req.body;
     const transaction = await sequelize.transaction();

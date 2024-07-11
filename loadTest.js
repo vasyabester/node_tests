@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const userId = 1;
-const amount = -20;
+const amount = -20;  //сумма на которую уменьшаем/увеличиваем баланс
 const url = 'http://localhost:3000/users/updateBalance';
 const totalRequests = 1000;
 
