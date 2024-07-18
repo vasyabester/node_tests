@@ -4,10 +4,17 @@ const sequelize = require('../db');
 class User extends Model {}
 
 User.init({
-    balance: DataTypes.INTEGER
+    balance: DataTypes.INTEGER,
+    version: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+    }
 }, {
     sequelize,
-    modelName: 'User'
+    modelName: 'User',
+    timestamps: true,
+    version: true
 });
 
 module.exports = User;

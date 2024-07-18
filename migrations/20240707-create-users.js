@@ -12,6 +12,11 @@ module.exports = {
             balance: {
                 type: Sequelize.INTEGER
             },
+            version: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                defaultValue: 0
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
